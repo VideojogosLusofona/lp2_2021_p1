@@ -39,7 +39,7 @@ mostrando a informação sobre esse mesmo _tile_.
 
 #### Mapas
 
-Os mapas são constituídos por _tiles_ 2D. Cada _tile_ é constituído por **um
+Os mapas são constituídos por _tiles_ 2D. Cada _tile_ é composto por **um
 tipo de terreno base** e **zero ou mais recursos**, que definem a **riqueza
 gerada pelo _tile_** em cada turno do hipotético jogo 4X.
 
@@ -77,26 +77,27 @@ devendo ser fácil alterá-las durante o desenvolvimento do hipotético jogo.
 
 #### Abrir ficheiro
 
-A aplicação começa por pedir ao utilizador o ficheiro descrevendo o mapa ao
-utilizador. Estes ficheiros devem ter a extensão `map4x`. Por exemplo,
-`mapa1.map4x`, `mapa2.map4x` ou `world.map4x` são nomes válidos para ficheiros
-que descrevem mapas. A secção [Formato dos ficheiros de mapa](formato) contém
-mais detalhes sobre o formato interno destes ficheiros.
+A aplicação começa por pedir ao utilizador o ficheiro descrevendo o mapa. Estes
+ficheiros devem ter a extensão `map4x`. Por exemplo, `mapa1.map4x`,
+`mapa2.map4x` ou `world.map4x` são nomes válidos para ficheiros que descrevem
+mapas. A secção [Formato dos ficheiros de mapa] contém mais detalhes
+sobre o formato interno destes ficheiros.
 
 Para simplificar, a aplicação procura apenas mapas na pasta `map4xfiles` (tudo
 em minúsculas), localizada no _Desktop_/ambiente de trabalho do utilizador
 atual. A aplicação apresenta ao utilizador uma lista ("_scrolável_") com os
-ficheiros `map4x` existentes nessa pasta, e o utilizador selecionada um deles.
+ficheiros `map4x` existentes nessa pasta, e o utilizador seleciona um deles.
 Quem quiser fazer uma aplicação mais avançada, com bonificação na nota, pode
 tentar usar um _asset_ como o [UnitySimpleFileBrowser] que consiga abrir
 ficheiros `map4x` em qualquer parte do disco.
 
 #### Mostrar o mapa no ecrã
 
-Após abrir um ficheiro correto, a aplicação mostra o mapa no ecrã. O mapa deve
-caber no ecrã, seja qual for o seu tamanho real. Em alternativa, podem
-implementar um sistema de _scroll_ e ou _zoom_, mas esta é uma abordagem mais
-avançada e inteiramente opcional.
+Após abrir um ficheiro válido, a aplicação mostra o mapa no ecrã. O mapa deve
+caber no ecrã, seja qual for o seu tamanho real. Por outras palavras, o mapa
+deve ser escalado de modo a ficar totalmente visível no ecrã, seja o seu tamanho
+10x5 ou 200x400. Em alternativa, podem implementar um sistema de _scroll_ e/ou
+_zoom_, mas esta é uma abordagem mais avançada e inteiramente opcional.
 
 A renderização de cada _tile_ pode ser feita com as _sprites_ básicas fornecidas
 pelo Unity. Cada tipo de terreno deve ser representado por uma _sprite_ quadrada
@@ -124,15 +125,17 @@ esse mesmo _tile_. Em particular, deve ser mostrado:
 * A renderização do _tile_ em tamanho um pouco maior.
 * Qual o terreno base.
 * Quais os recursos.
-* Qual o _gold_ produzido em cada turno.
-* Qual a _food_ produzida em cada turno.
+* Qual o _gold_ produzido em cada turno tendo em conta o terreno base e os
+  recursos existentes.
+* Qual a _food_ produzida em cada turno tendo em conta o terreno base e os
+  recursos existentes.
 
 O painel pode ser fechado pelo utilizador, voltando a aplicação a mostrar o
 mapa.
 
 #### Funcionalidade futura
 
-O UI da aplicação deve ter 5 botões, claramente marcados de 1 a 5. Ao clica num
+O UI da aplicação deve ter 5 botões, claramente marcados de 1 a 5. Ao clicar num
 destes botões, deve aparecer um painel praticamente vazio, apenas com a mensagem
 "For the future 1" para o botão 1, "For the future 2" para o botão 2, etc.
 
