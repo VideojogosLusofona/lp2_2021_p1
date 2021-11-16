@@ -43,7 +43,7 @@ Os mapas são constituídos por _tiles_ 2D. Cada _tile_ é composto por **um
 tipo de terreno base** e **zero ou mais recursos**, que definem a **riqueza
 gerada pelo _tile_** em cada turno do hipotético jogo 4X.
 
-Um _tile_ pode gerar três tipos de riqueza, dependendo do seu tipo de terreno
+Um _tile_ pode gerar dois tipos de riqueza, dependendo do seu tipo de terreno
 base e recursos disponíveis:
 
 * _Gold_: representa a riqueza monetária.
