@@ -205,8 +205,8 @@ $ dotnet run -p Generator -- 10 10 mymap.map4x
 
 O comando anterior cria um mapa 10x10 e guarda-o no ficheiro `mymap.map4x`.
 
-É necessário terem instalado o [.NET SDK 5.0] para executarem os comandos
-anteriores.
+Atenção que é necessário terem instalado o [.NET SDK 5.0] para executar este
+comando.
 
 ## Dicas e sugestões
 
