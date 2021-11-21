@@ -195,8 +195,18 @@ mountain plants
 # Tudo o que aparecer a seguir de # deve ser ignorado
 ```
 
-Em breve será disponibilizado um gerador de mapas que poderão utilizar para
-testar a vossa aplicação. Até lá, criem os vosso próprios mapas manualmente.
+Este enunciado inclui um gerador de mapas totalmente aleatórios para testarem o
+vosso projeto. O gerador é executado da seguinte forma na pasta do enunciado
+(não funciona se estiverem noutra pasta que não a do enunciado):
+
+```text
+$ dotnet run -p Generator -- 10 10 mymap.map4x
+```
+
+O comando anterior cria um mapa 10x10 e guarda-o no ficheiro `mymap.map4x`.
+
+É necessário terem instalado o [.NET SDK 5.0] para executarem os comandos
+anteriores.
 
 ## Dicas e sugestões
 
@@ -359,6 +369,8 @@ Estruturas de Dados][aed] do [Instituto Superior Técnico][ist]*
 ## Licenças
 
 * Este enunciado é disponibilizado através da licença [CC BY-NC-SA 4.0].
+* O código que acompanha este enunciado é disponibilizado através da licença
+  [MIT].
 
 ## Metadados
 
@@ -367,6 +379,7 @@ Estruturas de Dados][aed] do [Instituto Superior Técnico][ist]*
 * Instituição: [Universidade Lusófona de Humanidades e Tecnologias][ULHT]
 
 [CC BY-NC-SA 4.0]:https://creativecommons.org/licenses/by-nc-sa/4.0/
+[MIT]:http://opensource.org/licenses/MIT
 [lamv]:https://www.ulusofona.pt/licenciatura/videojogos
 [Nuno Fachada]:https://github.com/fakenmc
 [ULHT]:https://www.ulusofona.pt/
@@ -383,3 +396,4 @@ Estruturas de Dados][aed] do [Instituto Superior Técnico][ist]*
 [UnitySimpleFileBrowser]:https://github.com/yasirkula/UnitySimpleFileBrowser
 [Formato dos ficheiros de mapa]:#formato-dos-ficheiros-de-mapa
 [MVC]:https://www.geeksforgeeks.org/mvc-design-pattern/
+[.NET SDK 5.0]:https://dotnet.microsoft.com/download/dotnet/5.0
